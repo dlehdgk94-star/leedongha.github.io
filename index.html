@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="title">Hotel Insta — Pure Comfort</title>
+  <meta name="description" content="Hotel Insta — Pure comfort, style, and premium service in Suwon. Easy booking process and guaranteed relaxation.">
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'accent': '#c99b56', // Custom gold/bronze accent color
+            'bg-card': '#fcfcfc',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom style for smoother scrolling to anchors */
+    html {
+      scroll-behavior: smooth;
+    }
+    .hero-image-placeholder {
+      /* Ensure the placeholder image has a clean aesthetic matching the hotel theme */
+      background: linear-gradient(135deg, #f0e6c7, #fffdf4);
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #b88a44;
+      border: 1px solid #c99b56;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header class="flex items-center justify-between py-6">
+      <div class="text-3xl font-extrabold text-accent tracking-tight">Hotel Insta</div>
+      <div class="flex items-center space-x-4 sm:space-x-8">
+        <!-- Language Selector -->
+        <select id="language-selector" class="border border-gray-300 rounded-lg p-2 text-sm text-gray-700 focus:ring-accent focus:border-accent">
+          <option value="ko">한국어</option>
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="zh">中文</option>
+        </select>
+        <!-- Navigation -->
+        <nav class="space-x-4 sm:space-x-8">
+          <a href="#rooms" data-i18n="rooms" class="text-gray-600 hover:text-accent transition duration-150 font-medium">Rooms</a>
+          <a href="#services" data-i18n="services" class="text-gray-600 hover:text-accent transition duration-150 font-medium">Services</a>
+          <a href="#contact" data-i18n="contact" class="text-gray-600 hover:text-accent transition duration-150 font-medium">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center pt-10 pb-16">
+      <div class="space-y-6">
+        <!-- New Slogan Applied -->
+        <h1 data-i18n="headline" class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tighter text-gray-900">
+          Pure Comfort. Always.
+        </h1>
+        <p data-i18n="tagline" class="text-xl sm:text-2xl text-gray-700 max-w-lg">
+          Your stylish sanctuary in Suwon. Effortless booking, uninterrupted relaxation.
+        </p>
+        <a class="inline-block px-8 py-3 bg-accent text-white font-semibold rounded-xl shadow-lg hover:bg-amber-700 transition duration-300 transform hover:scale-[1.02] shadow-amber-500/50" href="#book">
+          <span data-i18n="book_now">BOOK NOW →</span>
+        </a>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8">
+          <div class="bg-white p-4 rounded-xl shadow-md border-t-4 border-accent">
+            <strong data-i18n="feat_breakfast_title" class="text-lg text-gray-800">Breakfast Room Service</strong>
+            <p data-i18n="feat_breakfast_desc" class="text-sm text-gray-500 mt-1">Enjoy a personalized breakfast delivered to your room.</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow-md border-t-4 border-accent">
+            <strong data-i18n="feat_location_title" class="text-lg text-gray-800">Prime Location</strong>
+            <p data-i18n="feat_location_desc" class="text-sm text-gray-500 mt-1">Quick access to Seoul and Incheon Airport (ICN).</p>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow-md border-t-4 border-accent">
+            <strong data-i18n="feat_concierge_title" class="text-lg text-gray-800">24h Concierge</strong>
+            <p data-i18n="feat_concierge_desc" class="text-sm text-gray-500 mt-1">Support, transport, and local tips around the clock.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-bg-card p-5 rounded-3xl shadow-2xl">
+        <!-- Placeholder for high-res image of the room/bathroom -->
+        <img 
+          src="https://placehold.co/600x400/c99b56/ffffff?text=Luxury+Room+Preview" 
+          alt="Premium hotel room with gold accents" 
+          class="w-full h-auto rounded-2xl mb-4 object-cover shadow-inner"
+          onerror="this.onerror=null;this.src='https://placehold.co/600x400/964B00/ffffff?text=Image+Not+Found'"
+        >
+        <h3 data-i18n="card_title" class="text-2xl font-semibold mb-2 text-gray-800">Designed for Wellbeing</h3>
+        <p data-i18n="card_desc" class="text-gray-500">Indulge in sophisticated design with premium bedding, modern fixtures, and spacious layouts.</p>
+      </div>
+    </main>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-16">
+      <h2 data-i18n="rooms_title" class="text-4xl font-bold mb-8 text-center text-gray-800">Our Signature Spaces</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100">
+          <h4 data-i18n="room_deluxe_title" class="text-xl font-semibold text-accent mb-2">Deluxe Room</h4>
+          <p data-i18n="room_deluxe_desc" class="text-gray-500">Queen bed, city view, dedicated work desk, and smart 32" TV. Everything you need.</p>
+          <a href="#book" class="mt-4 inline-block text-sm text-amber-600 hover:underline"><span data-i18n="view_details">View Details →</span></a>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100">
+          <h4 data-i18n="room_suite_title" class="text-xl font-semibold text-accent mb-2">Corner Suite</h4>
+          <p data-i18n="room_suite_desc" class="text-gray-500">Spacious living area, king bed, and floor-to-ceiling windows for stunning views.</p>
+          <a href="#book" class="mt-4 inline-block text-sm text-amber-600 hover:underline"><span data-i18n="view_details">View Details →</span></a>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100">
+          <h4 data-i18n="room_studio_title" class="text-xl font-semibold text-accent mb-2">Premium Studio</h4>
+          <p data-i18n="room_studio_desc" class="text-gray-500">Compact luxury with premium amenities and an indulgent rain shower/bathtub setup.</p>
+          <a href="#book" class="mt-4 inline-block text-sm text-amber-600 hover:underline"><span data-i18n="view_details">View Details →</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services & Quick Book Section -->
+    <section id="services" class="py-16 bg-gray-100 rounded-3xl mb-16">
+      <div class="grid lg:grid-cols-3 gap-8 p-8">
+        <div class="lg:col-span-2">
+          <h2 data-i18n="services_title" class="text-4xl font-bold mb-4 text-gray-800">Premium Services</h2>
+          <p data-i18n="services_tagline" class="text-lg text-gray-600 mb-6">We provide everything you need for a comfortable and productive stay.</p>
+          <ul class="text-gray-600 space-y-2 list-disc list-inside">
+            <li data-i18n="service_wifi">Complimentary High-Speed Wi-Fi</li>
+            <li data-i18n="service_breakfast">In-room Breakfast Service (Daily)</li>
+            <li data-i18n="service_frontdesk">24-hour Front Desk and Security</li>
+            <li data-i18n="service_laundry">Same-day Laundry and Dry Cleaning</li>
+            <li data-i18n="service_transport">Local Area Concierge and Transportation Assistance</li>
+          </ul>
+        </div>
+        
+        <!-- Quick Book Card -->
+        <div id="book" class="flex justify-center items-center">
+          <div class="bg-white p-6 rounded-2xl shadow-xl w-full max-w-sm border-t-4 border-accent">
+            <h4 data-i18n="book_card_title" class="text-2xl font-bold text-gray-800 mb-2">Ready to Book?</h4>
+            <p data-i18n="book_card_desc" class="text-gray-500 text-sm mb-4">Check availability and secure your reservation now.</p>
+            <a class="block w-full text-center px-6 py-3 bg-accent text-white font-semibold rounded-xl hover:bg-amber-700 transition duration-300 shadow-md" href="#">
+              <span data-i18n="book_reserve">Reserve Your Stay</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="pb-10">
+      <div class="border-t pt-8 border-gray-200">
+        <h2 data-i18n="contact_title" class="text-3xl font-bold mb-4 text-gray-800">Get in Touch</h2>
+        <div class="grid sm:grid-cols-2 gap-4 text-gray-600">
+            <div>
+                <p>Hotel Insta — Suwon</p>
+                <p data-i18n="contact_address">123 Yaksok-ro, Paldal-gu, Suwon-si, Gyeonggi-do</p>
+            </div>
+            <div>
+                <p><span data-i18n="contact_phone">Phone:</span> <a href="tel:+8231xxxxxxxx" class="text-amber-600 hover:underline">+82-31-xxxx-xxxx</a></p>
+                <p><span data-i18n="contact_email">Email:</span> <a href="mailto:info@hotelinsta.example" class="text-amber-600 hover:underline">info@hotelinsta.example</a></p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-8 py-6 border-t border-gray-200 text-center text-sm text-gray-500">
+      &copy; <span id="year"></span> <span data-i18n="footer">Hotel Insta — All rights reserved.</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // --- Multilingual Setup ---
+    const translations = {
+      en: {
+        title: "Hotel Insta — Pure Comfort", rooms: "Rooms", services: "Services", contact: "Contact",
+        headline: "Pure Comfort. Always.", tagline: "Your stylish sanctuary in Suwon. Effortless booking, uninterrupted relaxation.", book_now: "BOOK NOW →",
+        feat_breakfast_title: "Breakfast Room Service", feat_breakfast_desc: "Enjoy a personalized breakfast delivered to your room.",
+        feat_location_title: "Prime Location", feat_location_desc: "Quick access to Seoul and Incheon Airport (ICN).",
+        feat_concierge_title: "24h Concierge", feat_concierge_desc: "Support, transport, and local tips around the clock.",
+        card_title: "Designed for Wellbeing", card_desc: "Indulge in sophisticated design with premium bedding, modern fixtures, and spacious layouts.",
+        rooms_title: "Our Signature Spaces", view_details: "View Details →",
+        room_deluxe_title: "Deluxe Room", room_deluxe_desc: "Queen bed, city view, dedicated work desk, and smart 32\" TV. Everything you need.",
+        room_suite_title: "Corner Suite", room_suite_desc: "Spacious living area, king bed, and floor-to-ceiling windows for stunning views.",
+        room_studio_title: "Premium Studio", room_studio_desc: "Compact luxury with premium amenities and an indulgent rain shower/bathtub setup.",
+        services_title: "Premium Services", services_tagline: "We provide everything you need for a comfortable and productive stay.",
+        service_wifi: "Complimentary High-Speed Wi-Fi", service_breakfast: "In-room Breakfast Service (Daily)", service_frontdesk: "24-hour Front Desk and Security", service_laundry: "Same-day Laundry and Dry Cleaning", service_transport: "Local Area Concierge and Transportation Assistance",
+        book_card_title: "Ready to Book?", book_card_desc: "Check availability and secure your reservation now.", book_reserve: "Reserve Your Stay",
+        contact_title: "Get in Touch", contact_address: "123 Yaksok-ro, Paldal-gu, Suwon-si, Gyeonggi-do", contact_phone: "Phone:", contact_email: "Email:",
+        footer: "Hotel Insta — All rights reserved."
+      },
+      ko: {
+        title: "호텔 인스타 — 완벽한 편안함", rooms: "객실", services: "서비스", contact: "연락처",
+        headline: "완벽한 편안함. 언제나.", tagline: "수원에서 만나는 당신의 스타일리시한 안식처. 쉬운 예약, 끊김 없는 휴식.", book_now: "지금 예약 →",
+        feat_breakfast_title: "조식 룸서비스", feat_breakfast_desc: "객실에서 즐기는 맞춤형 아침 식사를 경험하세요.",
+        feat_location_title: "최적의 위치", feat_location_desc: "서울 및 인천 국제공항(ICN)으로의 빠른 접근성.",
+        feat_concierge_title: "24시간 컨시어지", feat_concierge_desc: "24시간 지원, 교통편, 현지 정보 제공.",
+        card_title: "웰빙을 위한 디자인", card_desc: "프리미엄 침구, 현대적인 시설, 넓은 레이아웃으로 세련된 디자인을 만끽하세요.",
+        rooms_title: "우리의 시그니처 공간", view_details: "세부 정보 보기 →",
+        room_deluxe_title: "디럭스 룸", room_deluxe_desc: "퀸 사이즈 침대, 도시 전망, 전용 업무용 책상, 스마트 32인치 TV. 필요한 모든 것.",
+        room_suite_title: "코너 스위트", room_suite_desc: "넓은 거실 공간, 킹 사이즈 침대, 멋진 전망을 위한 전면 창문.",
+        room_studio_title: "프리미엄 스튜디오", room_studio_desc: "프리미엄 편의 시설과 호화로운 레인 샤워/욕조 설비를 갖춘 컴팩트 럭셔리.",
+        services_title: "프리미엄 서비스", services_tagline: "편안하고 생산적인 숙박을 위해 필요한 모든 것을 제공합니다.",
+        service_wifi: "무료 고속 Wi-Fi", service_breakfast: "객실 내 조식 서비스 (매일)", service_frontdesk: "24시간 프런트 데스크 및 보안", service_laundry: "당일 세탁 및 드라이클리닝", service_transport: "현지 컨시어지 및 교통편 지원",
+        book_card_title: "예약 준비되셨나요?", book_card_desc: "지금 바로 가능 여부를 확인하고 예약을 확정하세요.", book_reserve: "숙박 예약하기",
+        contact_title: "문의하기", contact_address: "수원시 팔달구 약속로 123", contact_phone: "전화:", contact_email: "이메일:",
+        footer: "호텔 인스타 — 모든 권리 보유."
+      },
+      ja: {
+        title: "ホテルインスタ — ピュアな快適さ", rooms: "客室", services: "サービス", contact: "お問い合わせ",
+        headline: "ピュアな快適さ。いつでも。", tagline: "水原（スウォン）にあるスタイリッシュな安息の地。簡単な予約、途切れないリラックス。", book_now: "今すぐ予約 →",
+        feat_breakfast_title: "朝食ルームサービス", feat_breakfast_desc: "お部屋でお楽しみいただけるパーソナライズされた朝食。",
+        feat_location_title: "最高のロケーション", feat_location_desc: "ソウルと仁川国際空港（ICN）への迅速なアクセス。",
+        feat_concierge_title: "24時間コンシェルジュ", feat_concierge_desc: "24時間のサポート、交通手段、現地の情報。",
+        card_title: "ウェルビーイングのために設計", card_desc: "プレミアムな寝具、モダンな設備、広々としたレイアウトで洗練されたデザインをご堪能ください。",
+        rooms_title: "私たちのシグネチャー空間", view_details: "詳細を見る →",
+        room_deluxe_title: "デラックスルーム", room_deluxe_desc: "クイーンベッド、シティビュー、専用ワークデスク、スマート32インチTV。必要なものがすべて揃っています。",
+        room_suite_title: "コーナースイート", room_suite_desc: "広々としたリビングエリア、キングベッド、素晴らしい眺めを楽しめる床から天井までの窓。",
+        room_studio_title: "プレミアムスタジオ", room_studio_desc: "プレミアムアメニティと贅沢なレインシャワー/バスタブを備えたコンパクトなラグジュアリー。",
+        services_title: "プレミアムサービス", services_tagline: "快適で生産的なご滞在に必要なすべてを提供します。",
+        service_wifi: "無料高速Wi-Fi", service_breakfast: "客室内朝食サービス（毎日）", service_frontdesk: "24時間フロントデスクとセキュリティ", service_laundry: "当日ランドリーとドライクリーニング", service_transport: "現地コンシェルジュおよび交通手段のサポート",
+        book_card_title: "予約の準備はよろしいですか？", book_card_desc: "今すぐ空室状況を確認し、ご予約を確定してください。", book_reserve: "ご滞在を予約する",
+        contact_title: "お問い合わせ", contact_address: "水原市八達区薬束路123", contact_phone: "電話:", contact_email: "Eメール:",
+        footer: "ホテルインスタ — 全著作権所有。"
+      },
+      zh: {
+        title: "Insta酒店 — 纯粹的舒适", rooms: "客房", services: "服务", contact: "联系我们",
+        headline: "纯粹的舒适。始终如一。", tagline: "您在水原的时尚避风港。轻松预订，不间断的放松。", book_now: "立即预订 →",
+        feat_breakfast_title: "早餐客房服务", feat_breakfast_desc: "享受送至您房间的个性化早餐。",
+        feat_location_title: "优越的地理位置", feat_location_desc: "快速前往首尔和仁川国际机场 (ICN)。",
+        feat_concierge_title: "24小时礼宾服务", feat_concierge_desc: "全天候支持、交通和本地建议。",
+        card_title: "为健康而设计", card_desc: "尽情享受精致设计、高档床上用品、现代设施和宽敞布局。",
+        rooms_title: "我们的特色空间", view_details: "查看详情 →",
+        room_deluxe_title: "豪华客房", room_deluxe_desc: "大号床、城市景观、专用办公桌和智能32英寸电视。您需要的一切。",
+        room_suite_title: "转角套房", room_suite_desc: "宽敞的起居区、特大号床和落地窗，可欣赏迷人景色。",
+        room_studio_title: "高级工作室", room_studio_desc: "紧凑型豪华，配备高级设施和豪华的淋浴/浴缸。",
+        services_title: "尊享服务", services_tagline: "我们为您提供舒适高效入住所需的一切。",
+        service_wifi: "免费高速Wi-Fi", service_breakfast: "客房内早餐服务（每日）", service_frontdesk: "24小时前台和安保", service_laundry: "当日洗衣和干洗", service_transport: "本地礼宾和交通协助",
+        book_card_title: "准备好预订了吗？", book_card_desc: "立即查看空房情况并锁定您的预订。", book_reserve: "预订住宿",
+        contact_title: "联系我们", contact_address: "水原市八达区药束路123号", contact_phone: "电话:", contact_email: "电子邮件:",
+        footer: "Insta酒店 — 保留所有权利。"
+      }
+    };
+
+    const selector = document.getElementById('language-selector');
+
+    /**
+     * Updates all elements with the corresponding translated text.
+     * @param {string} langCode - The language code (e.g., 'en', 'ko').
+     */
+    function setLanguage(langCode) {
+      const texts = translations[langCode];
+      if (!texts) return;
+
+      // Update lang attribute for better accessibility
+      document.documentElement.lang = langCode;
+
+      // Update all elements with data-i18n attribute
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (texts[key]) {
+          // Special handling for meta title
+          if (element.tagName === 'TITLE') {
+             element.textContent = texts[key];
+          } else {
+             element.textContent = texts[key];
+          }
+        }
+      });
+      
+      // Update the main page title (meta title)
+      document.title = texts.title;
+
+      // Save preference
+      localStorage.setItem('hotelInstaLang', langCode);
+    }
+
+    // Event Listener for language change
+    selector.addEventListener('change', (event) => {
+      setLanguage(event.target.value);
+    });
+
+    // Initialize Language on Load
+    const storedLang = localStorage.getItem('hotelInstaLang') || 'ko'; // Default to Korean
+    if (selector.value !== storedLang) {
+      selector.value = storedLang; // Set the dropdown to the stored language
+    }
+    setLanguage(storedLang);
+
+  </script>
+</body>
+</html>
